@@ -1,7 +1,6 @@
 // src/comps/SignUp.js
 import React, { useState } from 'react';
-import { auth, db } from '../context/Firebase';  // Adjust the path as needed
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { db } from '../context/Firebase';  // Adjust the path as needed
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 
 function SignUp() {
@@ -13,15 +12,11 @@ function SignUp() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      // Create user with email and password
-      const userCredential = await createUserWithEmailAndPassword(auth, `${username}@example.com`, password);
-      const user = userCredential.user;
-
-      // Store additional user information in Firestore
-      await setDoc(doc(db, "users", user.uid), {
-        username,
+      // Store user information in Firestore
+      await setDoc(doc(db, "users", username), {
         firstName,
         lastName,
+        password,
         createdAt: serverTimestamp()
       });
 
@@ -85,5 +80,6 @@ function SignUp() {
     </div>
   );
 }
+
 
 export default SignUp;
