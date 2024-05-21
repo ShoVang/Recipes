@@ -1,0 +1,9 @@
+#1 tie in firebase
+#2 do the login and sign up first
+#3 creat an admin // admin ablitlys  = to delet shit 
+#4 recipes data base 
+#5 able to add into db 
+#6 styling and adding pics 
+#7 testing 
+# 8 launch
+#9... edit / add more shi?

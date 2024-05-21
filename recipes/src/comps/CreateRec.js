@@ -5,6 +5,10 @@ function CreateRec() {
     <div>
       <h1>Create recipes here</h1>
       <form>
+      <div>
+          <label htmlFor="name">Name:</label>
+          <input type="name" id="name" name="name" required />
+        </div>
         <div>
           <label htmlFor="type">Type:</label>
           <select id="type" name="type" required>
@@ -14,10 +18,6 @@ function CreateRec() {
             <option value="dinner">Dinner</option>
             <option value="dessert">Dessert</option>
           </select>
-          <div>
-          <label htmlFor="name">Name:</label>
-          <input type="name" id="name" name="name" required />
-        </div>
         </div>
         <div>
           <label htmlFor="description">Description:</label>

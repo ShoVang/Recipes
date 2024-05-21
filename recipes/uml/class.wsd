@@ -9,6 +9,7 @@ class User {
 }
 
 class Recipes {
+    -name: String
     -type: String
     -description: String
     -instructions: String
