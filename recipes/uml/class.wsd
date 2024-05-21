@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+
+class User {
+    -userName: String
+    -name: String
+    -password: String
+}
+
+class Recipes {
+    -type: String
+    -description: String
+    -instructions: String
+    -cost: Int
+}
+
+User "1" --> "create" Recipes
+User "2" --> "view all " Recipes
+
+
+@enduml
