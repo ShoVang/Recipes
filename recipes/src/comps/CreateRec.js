@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { db } from '../context/Firebase';  // Adjust the path as needed
-import { setDoc,collection, doc, serverTimestamp } from "firebase/firestore";
+import { setDoc, collection, doc, serverTimestamp } from "firebase/firestore";
 
 function CreateRec() {
   const [name, setName] = useState('');
