@@ -3,6 +3,7 @@
 #3 creat an admin // admin ablitlys  = to delet shit 
 #4 recipes data base 
 #5 able to add into db 
+#5.5 stack navgatior 
 #6 styling and adding pics 
 #7 testing 
 # 8 launch
