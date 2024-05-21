@@ -8,8 +8,8 @@ import ViewRec from './comps/ViewRec';
 function App() {
   return (
     <>
-      <Login/>
-      {/* <SignUp/> */}
+      {/* <Login/> */}
+      <SignUp/>
       {/* <CreateRec/> */}
       {/* <ViewRec/> */}
     </>
