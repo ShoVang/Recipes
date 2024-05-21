@@ -3,7 +3,8 @@ left to right direction
 
 class User {
     -userName: String
-    -name: String
+    -firstName: String
+    -lastName: String
     -password: String
 }
 
