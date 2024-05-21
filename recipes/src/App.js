@@ -7,10 +7,10 @@ import ViewRec from './comps/ViewRec';
 function App() {
   return (
     <>
-      {/* <Login/> */}
+      <Login/>
       {/* <SignUp/> */}
       {/* <CreateRec/> */}
-      <ViewRec/>
+      {/* <ViewRec/> */}
     </>
   );
 }

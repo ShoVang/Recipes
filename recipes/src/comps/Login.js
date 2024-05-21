@@ -3,7 +3,8 @@ import React from 'react';
 function Login() {
   return (
     <div>
-      <h1>Create and view recipes here</h1>
+      <h1>Welcom To Potluck Recipes </h1>
+      <h3>Create and view recipes here</h3>
       <form>
         <div>
           <label htmlFor="username">Username:</label>
