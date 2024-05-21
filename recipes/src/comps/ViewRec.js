@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
-
-const recipes = [
-  { id: 1, type: 'Breakfast', name: 'Pancakes', description: 'Fluffy pancakes', instructions: 'Mix ingredients and cook on a griddle.', cost: 5 },
-  { id: 2, type: 'Lunch', name: 'Caesar Salad', description: 'Classic Caesar salad', instructions: 'Toss lettuce with dressing and croutons.', cost: 8 },
-  { id: 3, type: 'Dinner', name: 'Spaghetti', description: 'Spaghetti with marinara sauce', instructions: 'Cook pasta and add sauce.', cost: 10 },
-  { id: 4, type: 'Dessert', name: 'Chocolate Cake', description: 'Rich chocolate cake', instructions: 'Bake the cake and frost with chocolate.', cost: 12 },
-];
+import React, { useState, useEffect } from 'react';
+import { db } from '../context/Firebase'; // Adjust the path as needed
+import { collection, getDocs } from "firebase/firestore"; 
 
 function ViewRec() {
+  const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'recipes'));
+        const fetchedRecipes = [];
+        querySnapshot.forEach((doc) => {
+          fetchedRecipes.push({ id: doc.id, ...doc.data() });
+        });
+        setRecipes(fetchedRecipes);
+      } catch (error) {
+        console.error('Error fetching recipes:', error);
+      }
+    };
+
+    fetchRecipes();
+  }, []);
 
   const handleRecipeClick = (recipe) => {
     setSelectedRecipe(recipe);
@@ -39,4 +52,3 @@ function ViewRec() {
 }
 
 export default ViewRec;
-

@@ -1,5 +1,6 @@
-#1 tie in firebase
-#2 do the login and sign up first
+#1 tie in firebase DONE
+#2 do the login and sign up first DONE 
+#2.1 implement the login function, needs to querry the db .. etc
 #3 creat an admin // admin ablitlys  = to delet shit 
 #4 recipes data base 
 #4.5 home page
@@ -9,3 +10,6 @@
 #7 testing 
 # 8 launch
 #9... edit / add more shi?
+
+imedit issues //
+ViewRec & ViewUsers not working. but users will sign up 
