@@ -6,7 +6,7 @@ Home page
 Able to add into the database
 
 TODO:
-viewing rec and users (users maybe)
-routing 
+viewing rec and users (users maybe) DONE
+routing working on it 
 styling 
 launching 
