@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       {/* <Login/> */}
-      <HomePage/>
+      {/* <HomePage/> */}
       {/* <SignUp/> */}
       {/* <CreateRec/> */}
-      {/* <ViewRec/> */}
+      <ViewRec/>
       {/* <ViewUsers/> */}
     </>
   );

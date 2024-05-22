@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../context/Firebase'; // Adjust the path as needed
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, getDocs, onSnapshot } from 'firebase/firestore';
 
-function ViewRec() {
+function ViewRecipes() {
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -10,13 +10,17 @@ function ViewRec() {
     const fetchRecipes = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, 'recipes'));
-        const fetchedRecipes = [];
-        querySnapshot.forEach((doc) => {
-          fetchedRecipes.push({ id: doc.id, ...doc.data() });
-        });
-        setRecipes(fetchedRecipes);
+        if (!querySnapshot.empty) {
+          const recipesData = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setRecipes(recipesData);
+        } else {
+          console.log('No matching documents.');
+        }
       } catch (error) {
-        console.error('Error fetching recipes:', error);
+        console.error('Error fetching recipes: ', error.message);
       }
     };
 
@@ -29,7 +33,7 @@ function ViewRec() {
 
   return (
     <div>
-      <h1>Recipes</h1>
+      <h1>View Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
           <li key={recipe.id} onClick={() => handleRecipeClick(recipe)}>
@@ -43,7 +47,9 @@ function ViewRec() {
           <p><strong>Type:</strong> {selectedRecipe.type}</p>
           <p><strong>Description:</strong> {selectedRecipe.description}</p>
           <p><strong>Cost:</strong> {selectedRecipe.cost}</p>
+          <p><strong>Requirements:</strong> {selectedRecipe.requirements}</p>
           <p><strong>Instructions:</strong> {selectedRecipe.instructions}</p>
+          <p><strong>Created At:</strong> {selectedRecipe.createdAt?.toDate().toString()}</p>
           <button onClick={() => setSelectedRecipe(null)}>Close</button>
         </div>
       )}
@@ -51,4 +57,4 @@ function ViewRec() {
   );
 }
 
-export default ViewRec;
+export default ViewRecipes;
