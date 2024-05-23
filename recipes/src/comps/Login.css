@@ -1,0 +1,60 @@
+.login-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+  
+  .login-form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 5px solid #b0aaaa;
+    border-radius: 5px;
+  }
+  
+  .button-group {
+    margin-top: 20px;
+    display: flex; /* Use flexbox to control the layout */
+    justify-content: space-between; /* Distribute space between the buttons */
+  }
+  
+  /* Style for both login and signup buttons */
+  .login-button, .signup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .login-button {
+    background-color: #c72fc7;
+    color: white;
+  }
+
+  
+  /* Add margin between the buttons */
+  .login-button + .login-button  {
+    margin-left: 10px; /* Adjust as needed */
+  }
+  
+
+  .login-button:hover, .signup-button:hover {
+    opacity: 0.8;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }

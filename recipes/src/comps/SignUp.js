@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { db } from '../context/Firebase';  // Adjust the path as needed
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
+
 
 function SignUp() {
   const [username, setUsername] = useState('');
@@ -9,6 +11,7 @@ function SignUp() {
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
@@ -21,6 +24,8 @@ function SignUp() {
       });
 
       alert('User registered successfully!');
+      navigate('/login'); // Redirect to login after signup
+
     } catch (error) {
       console.error('Error signing up:', error);
       alert('Error signing up: ' + error.message);

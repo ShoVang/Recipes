@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../context/Firebase'; // Adjust the path as needed
+import './Login.css'; // Assuming you have a separate CSS file for styling
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -36,11 +37,11 @@ function Login() {
   };
 
   return (
-    <div>
-      <h1>Welcome To Potluck Recipes</h1>
+    <div className="login-container">
+      <h1>Welcome To Potluck Recipes</h1> 
       <h3>Create and view recipes here</h3>
-      <form onSubmit={handleLogin}>
-        <div>
+      <form className="login-form" onSubmit={handleLogin}>
+        <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -51,7 +52,7 @@ function Login() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -62,8 +63,8 @@ function Login() {
             required
           />
         </div>
-        <button type="submit">Login</button>
-        <button type="button" onClick={() => navigate('/signup')}>Sign Up</button>
+          <button type="submit" className="login-button">Submit</button>
+          <button type="button" className="login-button" onClick={() => navigate('/')}>Back</button>
       </form>
     </div>
   );

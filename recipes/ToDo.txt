@@ -9,5 +9,6 @@ routing working on it DONE
 
 TODO:
 Do the login backended things// then rout to homepage   DONE
+after sign up leads to login DONE 
 styling 
 launching 
