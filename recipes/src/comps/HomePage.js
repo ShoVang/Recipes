@@ -6,12 +6,12 @@ function HomePage() {
     <div>
       <h1>Welcome To Potluck Recipes</h1>
       <div>
-        <Link to="/login">
+        {/* <Link to="/login">
           <button>Sign In</button>
         </Link>
         <Link to="/signup">
           <button>Sign Up</button>
-        </Link>
+        </Link> */}
         <Link to="/view-recipes">
           <button>View Recipes</button>
         </Link>

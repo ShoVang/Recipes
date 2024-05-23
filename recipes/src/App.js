@@ -7,12 +7,15 @@ import CreateRec from './comps/CreateRec';
 import ViewRec from './comps/ViewRec';
 import ViewUsers from './comps/ViewUsers';
 import HomePage from './comps/HomePage';
+import Index from './comps/Index';
 
-function App() {
+function App() { 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+         {/* <Route path="/" element={<HomePage />} />  */     /*
+         After loging in then rout to homepage.  */}
+        <Route path="/" element={<Index />} /> Starting index
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/create-recipe" element={<CreateRec />} />
@@ -22,5 +25,5 @@ function App() {
     </Router>
   );
 }
-
+ 
 export default App;

@@ -4,9 +4,10 @@ Implement login and sign up
 Create a recipes database
 Home page
 Able to add into the database
+viewing rec and users (users maybe) DONE
+routing working on it DONE
 
 TODO:
-viewing rec and users (users maybe) DONE
-routing working on it 
+Create homepage for after login
 styling 
 launching 
