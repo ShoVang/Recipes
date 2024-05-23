@@ -1,0 +1,57 @@
+.index-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .cover-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cover-picture {
+    width: 33.33%; /* Each image takes up one-third of the container's width */
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 5px; /* Add some spacing between images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #c72fc7; /* Black color */
+  }
+  
+  
+  .bio {
+    margin: 20px auto;
+    max-width: 1500px;
+    font-size: 1.5em;
+    color: #000000;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button {
+    background-color: #c72fc7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  

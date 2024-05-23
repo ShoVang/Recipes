@@ -8,6 +8,6 @@ viewing rec and users (users maybe) DONE
 routing working on it DONE
 
 TODO:
-Create homepage for after login
+Do the login backended things// then rout to homepage   DONE
 styling 
 launching 

@@ -17,6 +17,7 @@ function App() {
          After loging in then rout to homepage.  */}
         <Route path="/" element={<Index />} /> Starting index
         <Route path="/login" element={<Login />} />
+        <Route path="/home-page" element={<HomePage />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/create-recipe" element={<CreateRec />} />
         <Route path="/view-recipes" element={<ViewRec />} />
