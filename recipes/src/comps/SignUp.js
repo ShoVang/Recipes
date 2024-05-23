@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { db } from '../context/Firebase';  // Adjust the path as needed
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
+import './SignUp.css'; // Assuming you have a separate CSS file for styling
 
 
 function SignUp() {
@@ -32,11 +33,12 @@ function SignUp() {
     }
   };
 
+
   return (
-    <div>
+    <div className="login-container">
       <h1>Sign Up</h1>
-      <form onSubmit={handleSignUp}>
-        <div>
+      <form onSubmit={handleSignUp} className="login-form">
+        <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -47,7 +49,7 @@ function SignUp() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
@@ -58,7 +60,7 @@ function SignUp() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="lastName">Last Name:</label>
           <input
             type="text"
@@ -69,7 +71,7 @@ function SignUp() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -80,11 +82,14 @@ function SignUp() {
             required
           />
         </div>
-        <button type="submit">Sign Up</button>
+        <div className="button-group">
+          <button type="submit" className="login-button">Sign Up</button>
+        </div>
       </form>
     </div>
   );
 }
+
 
 
 export default SignUp;
