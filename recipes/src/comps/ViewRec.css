@@ -1,0 +1,126 @@
+.view-recipes-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #c72fc7;
+  }
+  
+  .recipes-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .recipe-item {
+.view-recipes-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #c72fc7;
+}
+
+.recipes-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.recipe-item {
+  background-color: #b3b2b2;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recipe-item:hover {
+  background-color: #f1f1f1;
+}
+
+.recipe-details {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details h2 {
+  color: #c72fc7;
+}
+
+.recipe-details p {
+  font-size: 16px;
+  color: #333;
+}
+
+.close-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c72fc7;
+  color: white;
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  background-color: #a22aa2;
+}
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .recipe-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .recipe-details {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-details h2 {
+    color: #c72fc7;
+  }
+  
+  .recipe-details p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .close-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #c72fc7;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .close-button:hover {
+    background-color: #a22aa2;
+  }
+  

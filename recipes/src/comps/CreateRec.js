@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../context/Firebase';  // Adjust the path as needed
 import { setDoc, collection, doc, serverTimestamp } from "firebase/firestore";
+import './CreateRec.css'; // Assuming you have a separate CSS file for styling
 
 function CreateRec() {
   const [name, setName] = useState('');
@@ -42,10 +43,13 @@ function CreateRec() {
   };
 
   return (
-    <div>
+    <div className="create-recipe-container">
       <h1>Create recipes here</h1>
-      <form onSubmit={handleCreateRecipe}>
-        <div>
+      <div className="button-group">
+        <button type="submit" className="create-button" onClick={handleCreateRecipe}>Create Recipe</button>
+      </div>
+      <form onSubmit={handleCreateRecipe} className="create-recipe-form">
+        <div className="form-group">
           <label htmlFor="name">Dish Name:</label>
           <input 
             type="text" 
@@ -56,7 +60,7 @@ function CreateRec() {
             required 
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="type">Type:</label>
           <select 
             id="type" 
@@ -72,7 +76,7 @@ function CreateRec() {
             <option value="dessert">Dessert</option>
           </select>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="description">Description:</label>
           <input 
             type="text" 
@@ -83,7 +87,7 @@ function CreateRec() {
             required 
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="cost">Cost:</label>
           <input 
             type="text" 
@@ -94,7 +98,7 @@ function CreateRec() {
             required 
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="requirements">Requirements:</label>
           <input 
             type="text" 
@@ -105,18 +109,17 @@ function CreateRec() {
             required 
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="instructions">Instructions:</label>
-          <input 
-            type="text" 
+          <textarea 
             id="instructions" 
             name="instructions" 
             value={instructions} 
             onChange={(e) => setInstructions(e.target.value)} 
             required 
-          />
+            rows="10" // Add rows attribute to make it bigger
+          ></textarea>
         </div>
-        <button type="submit">Create Recipe</button>
       </form>
     </div>
   );
