@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../context/Firebase'; // Adjust the path as needed
 import { collection, getDocs } from 'firebase/firestore';
 import './ViewRec.css'; // Assuming you have a separate CSS file for styling
+import { useNavigate } from 'react-router-dom';
+
 
 function ViewRecipes() {
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -35,6 +39,9 @@ function ViewRecipes() {
   return (
     <div className="view-recipes-container">
       <h1>View Recipes</h1>
+      <div className="button-group">
+        <button type="button" className="login-button" onClick={() => navigate('/home-page')}>Back</button>
+      </div>
       <ul className="recipes-list">
         {recipes.map((recipe) => (
           <li key={recipe.id} onClick={() => handleRecipeClick(recipe)} className="recipe-item">

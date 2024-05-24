@@ -1,7 +1,7 @@
 .login-container {
     text-align: center;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
   
   .login-form {
@@ -43,6 +43,7 @@
   .login-button {
     background-color: #c72fc7;
     color: white;
+    
   }
 
   

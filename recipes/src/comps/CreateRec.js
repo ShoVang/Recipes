@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { db } from '../context/Firebase';  // Adjust the path as needed
 import { setDoc, collection, doc, serverTimestamp } from "firebase/firestore";
 import './CreateRec.css'; // Assuming you have a separate CSS file for styling
+import { useNavigate } from 'react-router-dom';
+
 
 function CreateRec() {
   const [name, setName] = useState('');
@@ -10,6 +12,9 @@ function CreateRec() {
   const [cost, setCost] = useState('');
   const [requirements, setRequirements] = useState('');
   const [instructions, setInstructions] = useState('');
+
+  const navigate = useNavigate();
+
 
   const handleCreateRecipe = async (e) => {
     e.preventDefault();
@@ -47,6 +52,9 @@ function CreateRec() {
       <h1>Create recipes here</h1>
       <div className="button-group">
         <button type="submit" className="create-button" onClick={handleCreateRecipe}>Create Recipe</button>
+        </div>
+        <div className="button-group">
+        <button type="button" className="login-button" onClick={() => navigate('/home-page')}>Back</button>
       </div>
       <form onSubmit={handleCreateRecipe} className="create-recipe-form">
         <div className="form-group">

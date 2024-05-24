@@ -39,7 +39,7 @@ function Login() {
   return (
     <div className="login-container">
       <h1>Welcome To Potluck Recipes</h1> 
-      <h3>Create and view recipes here</h3>
+      <h2>Create and view recipes here</h2>
       <form className="login-form" onSubmit={handleLogin}>
         <div className="form-group">
           <label htmlFor="username">Username:</label>
