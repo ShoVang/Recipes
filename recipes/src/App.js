@@ -8,6 +8,7 @@ import ViewRec from './comps/ViewRec';
 import ViewUsers from './comps/ViewUsers';
 import HomePage from './comps/HomePage';
 import Index from './comps/Index';
+// lol to get it to run rename the firebase.js to Firebase.js , for some reason alwyas lowercasees it when i save or push it 
 
 function App() { 
   return (
